@@ -18,7 +18,7 @@ class CalculatorTest {
 
     @Test
     fun `add negative numbers`() {
-        assertEquals( -25.0, calculator.add(-10.0, 15.0))
+        assertEquals( -25.0, calculator.add(-45.0, 20.0))
     }
 
     @Test
@@ -36,7 +36,7 @@ class CalculatorTest {
     }
     @Test
     fun `division by zero`() {
-        assertThrows<IllegalArgumentException> {
+        assertThrows<ArithmeticException> {
             calculator.divide(25.0, 0.0)
         }
     }
